@@ -28,7 +28,7 @@ const authForm = document.getElementById('authForm').addEventListener('submit',(
     if(existingUser){
       const onlineUser = localStorage.setItem('onlineUser',JSON.stringify(existingUser));
 
-        window.location.href = '../indexPage/index.html'
+        window.location.href = 'Login.html'
     }else{
       alert('invalid Credentials')
       return

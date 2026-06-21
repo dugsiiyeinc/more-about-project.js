@@ -3,24 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>weather-app-project</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="Login.css">
 </head>
 <body>
-    
-    <form class="weatherFrom">
-        <input type="text" class="cityInput" placeholder="Enter city">
-        <button type="submit">Get Weather</button>
-    </form>
+     <div class="layout">
+      <div class="auth-container">
+        <h1 id="form-title">Sign In</h1>
+        <form id="authForm">
+          <input type="text" id="username" placeholder="Enter your username" style="display: none;"/>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Confirm your password"
+            style="display: none"
+          />
+          <button type="submit" id="authButton">Sign In</button>
+        </form>
+        <p id="authSwitch">
+          New to DugFlix? <a href="#" id="switchForm">Register now</a>
+        </p>
+      </div>
+    </div>
 
-        <div class="card" style="display: none;">
-            <!-- <h1 class="cityDisplay">Miami</h1>
-            <p class="tempDisplay">90°F</p>
-            <p class="humidityDisplay">Humidity: 75%</p>
-            <p class="descDisplay"> Clear Skies</p>
-            <p class="weatherEmoji">☀️</p>
-            <p class="errorDisplay">Please enter a city</p> -->
-        </div>
-    <script src="main.js"></script>
+    <script src="Login.js"></script>
 </body>
 </html>

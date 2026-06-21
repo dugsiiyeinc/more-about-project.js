@@ -1,10 +1,23 @@
 const weatherFrom = document.querySelector('.weatherFrom');
 const cityInput = document.querySelector('.cityInput');
 const card = document.querySelector('.card');
+
 const apikey = '1a9fe2ac9fce0b181b16be3ff5508ab0'
 
 weatherFrom.addEventListener('submit', async event=>{
 event.preventDefault()
+
+
+    const issignIn = localStorage.getItem("users");
+
+    if (!issignIn) {
+        window.location.href = "login.html";
+        return;
+    }
+
+    // continue weather logic here
+    console.log("Fetching weather...");
+
 const city = cityInput.value;
 
 if(city){
@@ -15,8 +28,10 @@ try {
     console.error(error);
     displayError(error);
 }
+
 }else{
     displayError('Please enter a city');
+    
 }
 })
 
