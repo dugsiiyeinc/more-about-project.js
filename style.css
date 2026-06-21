@@ -6,6 +6,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+   background: linear-gradient(135deg, #10B981, #06B6D4);
 }
 .weatherForm{
     margin: 20px;
